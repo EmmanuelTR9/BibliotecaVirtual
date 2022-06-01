@@ -1,0 +1,62 @@
+<div class="card card-body p-4 rounded-0 bg-dark text-white">
+  <h3 class="text-center">Agregar Libro</h3>
+  <form action="/tasks/add" method="post">
+
+    {{! Title Input }}
+    <div class="mb-3">
+      <label for="title">Escribe el Titulo:</label>
+      <input
+        id="title"
+        class="form-control rounded-0 bg-dark text-white"
+        type="text"
+        name="title"
+        placeholder="Titulo"
+        autofocus
+      />
+    </div>
+
+    {{! Description Input }}
+    <div class="mb-3">
+      <label for="description">Descripcion del libro</label>
+      <textarea
+        class="form-control rounded-0 bg-dark text-white"
+        name="description"
+        cols="80"
+        placeholder="Agregue la descripcion del libro"></textarea>
+    </div>
+    {{! Autor Input }}
+    <div class="mb-3">
+      <label for="autor">Descripcion del Autor</label>
+      <textarea
+        class="form-control rounded-0 bg-dark text-white"
+        name="autor"
+        cols="80"
+        placeholder="Agregue el nombre del autor"
+      ></textarea>
+    </div>
+
+    {{! Genero Input }}
+    <div class="mb-3">
+      <label for="genero">Genero del libro</label>
+      <textarea
+        class="form-control rounded-0 bg-dark text-white"
+        name="genero"
+        cols="80"
+        placeholder="Agregue el genero del libro"
+      ></textarea>
+    </div>
+
+    {{! Editorial Input }}
+    <div class="mb-3">
+      <label for="editorial">Descripcion del editorial</label>
+      <textarea
+        class="form-control rounded-0 bg-dark text-white"
+        name="editorial"
+        cols="80"
+        placeholder="Agregue el nombre del editorial"
+      ></textarea>
+    </div>
+
+    <div class="text-center"><button class="btn btn-primary" type="submit">Agregar Libro</button></div>
+  </form>
+</div>

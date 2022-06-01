@@ -1,0 +1,6 @@
+.bg-black {
+  background-color: #111111 !important;
+}
+.navbarcol{
+  background-image: var(--bs-gradient);
+}

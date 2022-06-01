@@ -1,0 +1,56 @@
+{{#if tasks}}
+  <table class="table table-bordered table-hover table-dark">
+    <thead>
+      <tr>
+        <th>N°</th>
+        <th class="text-center">Titulo</th>
+        <th class="text-center">Descripcion</th>
+        <th class="text-center">Autor</th>
+        <th class="text-center">Genero</th>
+        <th class="text-center">Editorial</th>
+        <th class="text-center">Stock</th>
+        <th class="text-center">Operaciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each tasks}}
+        <tr>
+          <td class="text-center">{{@index}}</td>
+          <td class="text-justify"><strong>{{title}}</strong></td>
+          <td class="text-justify">{{description}}</td>
+          <td class="text-center">{{autor}}</td>
+          <td class="text-center">{{genero}}</td>
+          <td class="text-center">{{editorial}}</td>
+          <td class="text-center">
+          
+            {{#if done}}
+              <a
+                class="btn btn-success"
+                href="/tasks/{{_id}}/toggleDone"
+              >Disponible</a>
+            {{else}}
+              <a class="btn btn-dark" href="/tasks/{{_id}}/toggleDone">
+                Ocupado
+              </a>
+            {{/if}}
+            <td>
+            <a href="/tasks/{{_id}}/delete" class="btn btn-danger">
+              Eliminar
+            </a>
+            <a href="/tasks/{{_id}}/edit" class="btn btn-info">
+              Editar
+            </a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <div class="h-100 d-flex align-items-center justify-content-center">
+    <div class="text-center text-white">
+      <h1>No tasks</h1>
+      <img src="/icons/empty.svg" class="w-75" />
+    </div>
+
+  </div>
+{{/if}}
